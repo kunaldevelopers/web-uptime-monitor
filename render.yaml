@@ -4,7 +4,7 @@ services:
     env: python
     region: singapore # You can change this to oregon, frankfurt, etc.
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn auto_pinger:app --bind 0.0.0.0:$PORT --workers 1 --threads 2 --timeout 120"
+    startCommand: "gunicorn app:app --bind 0.0.0.0:$PORT --workers 1 --threads 2 --timeout 120"
     plan: free # Can be updated to starter or standard
     envVars:
       - key: PYTHON_VERSION

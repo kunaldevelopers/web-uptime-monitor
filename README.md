@@ -5,7 +5,7 @@ A simple, robust, and web-based Python application that prevents free-tier hosti
 ## ✨ Features
 
 - **Multi-URL Pinging:** Monitor and prevent sleep for multiple applications simultaneously.
-- **Human-like Ping Intervals:** Randomizes ping intervals (30s to 120s) to appear more natural and avoid simplistic bot detection.
+- **Human-like Ping Intervals:** Randomizes ping intervals (10s to 49s) to appear more natural and avoid simplistic bot detection.
 - **Web Interface (GUI):** Clean, responsive dashboard to start/stop pinging and view live logs.
 - **Automated Log Rotation:** Logs are kept for maximum 2 days before being discarded to ensure zero storage overhead on production servers.
 - **One-Click Deploy:** Ready out of the box for Render using `render.yaml`.
@@ -49,7 +49,7 @@ pip install -r requirements.txt
 ### 3. Run the App
 To start the Flask Web GUI, simply run:
 ```bash
-python auto_pinger.py
+python app.py
 ```
 
 Now open up your browser and visit:
@@ -60,9 +60,9 @@ Enter your Render URLs on the dashboard, hit "Start", and watch the live logs!
 ---
 
 ## 🛠️ Configuration
-If you wish to configure intervals, you can modify the bounds in `auto_pinger.py`:
-- `MIN_INTERVAL = 30` (Seconds)
-- `MAX_INTERVAL = 120` (Seconds)
+If you wish to configure intervals, you can modify the bounds in `app.py`:
+- `MIN_INTERVAL = 10` (Seconds)
+- `MAX_INTERVAL = 49` (Seconds)
 
 ## 📝 Logs
 - Terminal / SSH: The script prints visually formatted logs with emojis to `stdout`.
